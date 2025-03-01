@@ -1,29 +1,29 @@
-import React, { useState } from "react";
+import ContactPhoneIcon from "@mui/icons-material/ContactPhone";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
+import SecurityIcon from "@mui/icons-material/Security";
+import SmartToyIcon from "@mui/icons-material/SmartToy";
 import {
-  Container,
-  Stepper,
-  Step,
-  StepLabel,
-  Button,
-  Typography,
+  Avatar,
   Box,
-  TextField,
+  Button,
   Card,
   CardContent,
+  Container,
   Grid,
   Paper,
+  Step,
+  StepLabel,
+  Stepper,
+  TextField,
+  Typography,
   useTheme,
-  Avatar,
 } from "@mui/material";
+import { doc, setDoc } from "firebase/firestore";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
-import { doc, setDoc } from "firebase/firestore";
 import { db } from "../../services/firebase";
-import SecurityIcon from "@mui/icons-material/Security";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import ContactPhoneIcon from "@mui/icons-material/ContactPhone";
-import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
-import SmartToyIcon from "@mui/icons-material/SmartToy";
 
 interface UserProfile {
   displayName: string;
